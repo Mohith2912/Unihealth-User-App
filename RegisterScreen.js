@@ -706,7 +706,7 @@ export default function RegisterScreen({ navigation }) {
   );
 
   return (
-    <LinearGradient colors={['#1a3c5a', '#25a29a']} style={styles.container}>
+    <LinearGradient colors={['#0891b2', '#0e7490']} style={styles.container}>
       <KeyboardAvoidingView
         style={{ flex: 1 }}
         behavior={Platform.OS === 'ios' ? 'padding' : undefined}
@@ -943,7 +943,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  activeStepCircle: { backgroundColor: '#25a29a' },
+  activeStepCircle: { backgroundColor: '#0891b2' },
   stepNum: { fontSize: 14, fontWeight: 'bold', color: '#7f8c8d' },
   activeStepNum: { color: '#fff' },
   stepLine: {
@@ -952,11 +952,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#f1f2f6',
     marginHorizontal: 5,
   },
-  activeStepLine: { backgroundColor: '#25a29a' },
+  activeStepLine: { backgroundColor: '#0891b2' },
   mainHeader: {
     fontSize: 26,
     fontWeight: '900',
-    color: '#1a3c5a',
+    color: '#0891b2',
     textAlign: 'center',
   },
   subHeader: {
@@ -969,7 +969,7 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 13,
     fontWeight: '800',
-    color: '#25a29a',
+    color: '#0891b2',
     marginTop: 20,
     marginBottom: 10,
   },
@@ -989,7 +989,7 @@ const styles = StyleSheet.create({
   },
   eyeBtn: { padding: 10 },
   actionBtn: {
-    backgroundColor: '#1a3c5a',
+    backgroundColor: '#0891b2',
     padding: 15,
     borderRadius: 12,
     alignItems: 'center',
@@ -1005,9 +1005,9 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#eee',
   },
-  ghostBtnText: { color: '#1a3c5a', fontWeight: 'bold', fontSize: 12 },
+  ghostBtnText: { color: '#0891b2', fontWeight: 'bold', fontSize: 12 },
   nextBtn: {
-    backgroundColor: '#25a29a',
+    backgroundColor: '#0891b2',
     padding: 18,
     borderRadius: 15,
     alignItems: 'center',
@@ -1031,13 +1031,13 @@ const styles = StyleSheet.create({
   dottedBtn: {
     borderStyle: 'dashed',
     borderWidth: 1.5,
-    borderColor: '#25a29a',
+    borderColor: '#0891b2',
     padding: 15,
     borderRadius: 15,
     alignItems: 'center',
     marginVertical: 15,
   },
-  dottedBtnText: { color: '#25a29a', fontWeight: 'bold' },
+  dottedBtnText: { color: '#0891b2', fontWeight: 'bold' },
   consentRow: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -1047,14 +1047,14 @@ const styles = StyleSheet.create({
     width: 22,
     height: 22,
     borderWidth: 2,
-    borderColor: '#25a29a',
+    borderColor: '#0891b2',
     borderRadius: 6,
     marginRight: 10,
   },
-  checkboxChecked: { backgroundColor: '#25a29a' },
+  checkboxChecked: { backgroundColor: '#0891b2' },
   consentText: { color: '#7f8c8d', fontSize: 12 },
   submitBtn: {
-    backgroundColor: '#1a3c5a',
+    backgroundColor: '#0891b2',
     padding: 20,
     borderRadius: 18,
     alignItems: 'center',
