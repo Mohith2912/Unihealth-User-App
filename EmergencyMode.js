@@ -214,9 +214,9 @@ const styles = StyleSheet.create({
   occupancyValue: { fontSize: 28, fontWeight: "900", color: "#0f172a" },
   thresholdText: { fontSize: 10, color: "#94a3b8" },
   progressBarBg: { height: 10, backgroundColor: "#f1f5f9", borderRadius: 5, overflow: "hidden" },
-  progressBarFill: { height: "100%", backgroundColor: "#3b82f6" },
+  progressBarFill: { height: "100%", backgroundColor: "#0891b2" },
   activityItem: { flexDirection: "row", alignItems: "center", paddingVertical: 8, borderBottomWidth: 1, borderBottomColor: "#f1f5f9" },
-  activityDot: { width: 6, height: 6, borderRadius: 3, backgroundColor: "#3b82f6", marginRight: 12 },
+  activityDot: { width: 6, height: 6, borderRadius: 3, backgroundColor: "#0891b2", marginRight: 12 },
   activityText: { fontSize: 12, color: "#1e293b", fontWeight: "600" },
   activityMeta: { fontSize: 10, color: "#94a3b8" }
 });
