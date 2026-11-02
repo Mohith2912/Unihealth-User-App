@@ -37,7 +37,7 @@ const HospitalsListScreen = ({ navigation }) => {
   if (loading) {
     return (
       <View style={styles.center}>
-        <ActivityIndicator size="large" color="#1a73e8" />
+        <ActivityIndicator size="large" color="#0891b2" />
         <Text style={{ marginTop: 8 }}>Loading hospitals…</Text>
       </View>
     );
@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
   badge: {
     paddingHorizontal: 8,
     paddingVertical: 3,
-    backgroundColor: '#1a73e8',
+    backgroundColor: '#0891b2',
     color: '#fff',
     borderRadius: 999,
     fontSize: 12,

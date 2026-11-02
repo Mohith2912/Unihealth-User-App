@@ -499,7 +499,7 @@ export default function HospitalGeneralScreen({ navigation, route }) {
             <View
               style={[
                 styles.tileIconContainer,
-                { backgroundColor: '#0f766e20' },
+                { backgroundColor: '#0891b220' },
               ]}
             >
               <MaterialCommunityIcons
@@ -566,7 +566,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 4,
     borderRadius: 999,
-    backgroundColor: '#0f766e15',
+    backgroundColor: '#0891b215',
   },
   heroPillText: {
     fontSize: 11,
