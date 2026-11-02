@@ -29,7 +29,7 @@ const Chip = ({ label }) => (
 
 const HighlightCard = ({ icon, label, value }) => (
   <View style={styles.highlightCard}>
-    <MaterialCommunityIcons name={icon} size={18} color="#0f766e" />
+    <MaterialCommunityIcons name={icon} size={18} color="#0891b2" />
     <Text style={styles.highlightLabel}>{label}</Text>
     <Text style={styles.highlightValue}>{value}</Text>
   </View>
@@ -39,7 +39,7 @@ const ActionButton = ({ icon, label, desc, color, primary, onPress }) => (
   <TouchableOpacity
     style={[
       styles.actionBtn,
-      primary && { backgroundColor: '#0f766e', borderColor: '#0f766e' },
+      primary && { backgroundColor: '#0891b2', borderColor: '#0891b2' },
     ]}
     onPress={onPress}
   >
@@ -96,7 +96,7 @@ const DepartmentCard = ({ label, totalDoctors, nextSlot }) => (
 const DoctorRow = ({ name, department, experience, onDuty, onBook }) => (
   <View style={styles.docRow}>
     <View style={styles.docAvatar}>
-      <MaterialCommunityIcons name="doctor" size={20} color="#0f766e" />
+      <MaterialCommunityIcons name="doctor" size={20} color="#0891b2" />
     </View>
     <View style={{ flex: 1 }}>
       <Text style={styles.docName}>{name}</Text>
@@ -167,7 +167,7 @@ export default function HospitalGeneralScreen({ navigation, route }) {
   if (loading) {
     return (
       <View style={styles.loading}>
-        <ActivityIndicator size="large" color="#0f766e" />
+        <ActivityIndicator size="large" color="#0891b2" />
         <Text style={styles.loadingText}>Loading hospital details…</Text>
       </View>
     );
@@ -289,7 +289,7 @@ export default function HospitalGeneralScreen({ navigation, route }) {
             <MaterialCommunityIcons
               name="calendar-clock"
               size={13}
-              color="#0f766e"
+              color="#0891b2"
             />
             <Text style={[styles.heroPillText, { marginLeft: 4 }]}>
               OPD today
@@ -384,7 +384,7 @@ export default function HospitalGeneralScreen({ navigation, route }) {
           icon="calendar-check"
           label="Book OPD token"
           desc="Reserve a slot for in-person consultation"
-          color="#0f766e"
+          color="#0891b2"
           primary
           onPress={handleBookToken}
         />
@@ -505,7 +505,7 @@ export default function HospitalGeneralScreen({ navigation, route }) {
               <MaterialCommunityIcons
                 name="pill"
                 size={22}
-                color="#0f766e"
+                color="#0891b2"
               />
             </View>
             <View style={styles.tileTextContainer}>
@@ -570,13 +570,13 @@ const styles = StyleSheet.create({
   },
   heroPillText: {
     fontSize: 11,
-    color: '#0f766e',
+    color: '#0891b2',
     fontWeight: '700',
     marginLeft: 4,
   },
   heroDot: {
     marginHorizontal: 4,
-    color: '#0f766e',
+    color: '#0891b2',
     fontWeight: '900',
   },
   chipRow: {
@@ -757,7 +757,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 4,
     borderRadius: 999,
-    backgroundColor: '#0f766e',
+    backgroundColor: '#0891b2',
   },
   docBookText: {
     fontSize: 11,
