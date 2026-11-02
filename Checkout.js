@@ -219,7 +219,7 @@ export default function Checkout({ route, navigation }) {
           onPress={() => navigation.goBack()}
           style={styles.backBtn}
         >
-          <Ionicons name="arrow-back" size={24} color="#1a3c5a" />
+          <Ionicons name="arrow-back" size={24} color="#0f172a" />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>Checkout</Text>
       </View>
@@ -237,7 +237,7 @@ export default function Checkout({ route, navigation }) {
             </View>
             <TouchableOpacity onPress={handleGPSLocation}>
               {isLocating ? (
-                <ActivityIndicator size="small" color="#25a29a" />
+                <ActivityIndicator size="small" color="#0891b2" />
               ) : (
                 <Text style={styles.gpsText}>Use GPS</Text>
               )}
@@ -338,7 +338,7 @@ export default function Checkout({ route, navigation }) {
                   <Ionicons
                     name="checkmark-circle"
                     size={18}
-                    color="#25a29a"
+                    color="#0891b2"
                   />
                 )}
               </TouchableOpacity>
@@ -407,7 +407,7 @@ export default function Checkout({ route, navigation }) {
               {method === 'WALLET' && (
                 <View style={styles.walletPill}>
                   {walletLoading ? (
-                    <ActivityIndicator size="small" color="#0f766e" />
+                    <ActivityIndicator size="small" color="#0891b2" />
                   ) : (
                     <Text style={styles.walletPillText}>
                       ₹{walletBalance}
@@ -480,7 +480,7 @@ export default function Checkout({ route, navigation }) {
             <Ionicons
               name="shield-checkmark"
               size={16}
-              color="#25a29a"
+              color="#0891b2"
             />
             <Text style={styles.safetyBadgeText}>
               WHO-GPP COMPLIANT DELIVERY

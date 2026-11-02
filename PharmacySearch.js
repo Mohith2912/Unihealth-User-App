@@ -226,7 +226,7 @@ const pharmacyName = route?.params?.pharmacyName || 'Pharmacy Store';
                 <Ionicons
                   name="remove"
                   size={18}
-                  color="#1a3c5a"
+                  color="#0f172a"
                 />
               </TouchableOpacity>
               <Text style={styles.qtyText}>{qty}</Text>
@@ -234,7 +234,7 @@ const pharmacyName = route?.params?.pharmacyName || 'Pharmacy Store';
                 <Ionicons
                   name="add"
                   size={18}
-                  color="#1a3c5a"
+                  color="#0f172a"
                 />
               </TouchableOpacity>
             </View>
@@ -276,7 +276,7 @@ const pharmacyName = route?.params?.pharmacyName || 'Pharmacy Store';
             <Ionicons
               name="mic"
               size={22}
-              color="#25a29a"
+              color="#0891b2"
             />
           </TouchableOpacity>
         </View>
@@ -312,7 +312,7 @@ const pharmacyName = route?.params?.pharmacyName || 'Pharmacy Store';
       {loading ? (
         <ActivityIndicator
           size="large"
-          color="#25a29a"
+          color="#0891b2"
           style={{ marginTop: 50 }}
         />
       ) : (
@@ -381,7 +381,7 @@ const pharmacyName = route?.params?.pharmacyName || 'Pharmacy Store';
             <MaterialCommunityIcons
               name="file-document-edit"
               size={40}
-              color="#25a29a"
+              color="#0891b2"
             />
             <Text style={styles.modalTitle}>
               Prescription Required
