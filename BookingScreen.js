@@ -67,7 +67,7 @@ export default function BookingScreen({ route, navigation }) {
         
         <View style={styles.doctorCard}>
           <View style={styles.iconCircle}>
-             <Ionicons name="medical" size={30} color="#0284c7" />
+             <Ionicons name="medical" size={30} color="#0891b2" />
           </View>
           <View style={{ marginLeft: 15 }}>
             <Text style={styles.drName}>{doctor.name}</Text>
@@ -106,16 +106,16 @@ const styles = StyleSheet.create({
   navRow: { flexDirection: 'row', alignItems: 'center', gap: 15, marginBottom: 25 },
   title: { fontSize: 22, fontWeight: "900", color: "#0f172a" },
   doctorCard: { flexDirection: "row", alignItems: "center", backgroundColor: "#f8fafc", padding: 20, borderRadius: 24, marginBottom: 35, borderWidth: 1, borderColor: '#f1f5f9' },
-  iconCircle: { width: 60, height: 60, borderRadius: 30, backgroundColor: '#e0f2fe', justifyContent: 'center', alignItems: 'center' },
+  iconCircle: { width: 60, height: 60, borderRadius: 30, backgroundColor: '#ecfeff', justifyContent: 'center', alignItems: 'center' },
   drName: { fontSize: 18, fontWeight: "800", color: "#1e293b" },
   drSpec: { fontSize: 14, color: "#64748b", marginTop: 2 },
   sectionLabel: { fontSize: 12, fontWeight: "800", color: "#94a3b8", textTransform: "uppercase", letterSpacing: 1, marginBottom: 15 },
   slotGrid: { flexDirection: "row", flexWrap: "wrap", gap: 10, marginBottom: 40 },
   slot: { paddingVertical: 14, paddingHorizontal: 18, borderRadius: 15, borderWidth: 2, borderColor: "#f1f5f9", minWidth: '45%' },
-  selectedSlot: { backgroundColor: "#0284c7", borderColor: "#0284c7" },
+  selectedSlot: { backgroundColor: "#0891b2", borderColor: "#0891b2" },
   slotText: { fontWeight: "700", color: "#475569", textAlign: 'center' },
   selectedSlotText: { color: "#fff" },
-  confirmBtn: { backgroundColor: "#0f172a", padding: 22, borderRadius: 20, alignItems: "center", elevation: 4 },
+  confirmBtn: { backgroundColor: "#0891b2", minHeight: 48, padding: 22, borderRadius: 20, alignItems: "center", elevation: 4 },
   confirmBtnText: { color: "#fff", fontWeight: "900", fontSize: 16, letterSpacing: 1 },
   footerNote: { textAlign: 'center', marginTop: 20, color: '#94a3b8', fontSize: 12, fontStyle: 'italic' }
 });
