@@ -401,7 +401,7 @@ export default function PatientHome({ navigation, route }) {
       <StatusBar barStyle="light-content" />
 
       <LinearGradient
-        colors={['#020617', '#0f172a', '#1e293b']}
+        colors={['#0891b2', '#0e7490', '#134e4a']}
         style={styles.topBg}
       >
         <SafeAreaView>
@@ -772,7 +772,7 @@ const styles = StyleSheet.create({
     marginTop: 15,
   },
   welcomeText: {
-    color: '#94a3b8',
+    color: '#e0f2fe',
     fontSize: 16,
     fontWeight: '600',
   },
