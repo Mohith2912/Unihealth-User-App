@@ -121,7 +121,7 @@ export default function LabTestCart({ navigation }) {
                     <MaterialCommunityIcons
                       name="test-tube"
                       size={20}
-                      color={active ? '#0f172a' : '#0ea5e9'}
+                      color={active ? '#0f172a' : '#0891b2'}
                     />
                   </View>
                   <View style={{ flex: 1 }}>
@@ -235,7 +235,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 18,
     fontWeight: '800',
-    color: '#1a3c5a',
+    color: '#0f172a',
   },
   content: {
     padding: 20,
@@ -258,7 +258,7 @@ const styles = StyleSheet.create({
     borderColor: '#e5e7eb',
   },
   cardActive: {
-    borderColor: '#0ea5e9',
+    borderColor: '#0891b2',
     backgroundColor: '#f0f9ff',
   },
   cardTop: {
@@ -306,7 +306,7 @@ const styles = StyleSheet.create({
     color: '#1e293b',
   },
   priceActive: {
-    color: '#0ea5e9',
+    color: '#0891b2',
   },
   selectedTag: {
     marginTop: 4,
@@ -362,7 +362,7 @@ const styles = StyleSheet.create({
     marginTop: 2,
   },
   ctaBtn: {
-    backgroundColor: '#0ea5e9',
+    backgroundColor: '#0891b2',
     paddingHorizontal: 18,
     paddingVertical: 10,
     borderRadius: 999,
