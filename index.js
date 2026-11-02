@@ -82,14 +82,14 @@ export default function LoginScreen({ navigation }) {
   };
 
   return (
-    <LinearGradient colors={['#1a3c5a', '#25a29a']} style={styles.container}>
+    <LinearGradient colors={['#0891b2', '#0e7490']} style={styles.container}>
       <KeyboardAvoidingView 
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
         style={styles.innerContainer}
       >
         <View style={styles.card}>
           <Text style={styles.brand}>UNI-HEALTH</Text>
-          <Text style={styles.title}>SECURE LOGIN</Text>
+          <Text style={styles.title}>PATIENT & CLINICAL PORTAL</Text>
 
           {/* Email Field */}
           <View style={styles.inputGroup}>
@@ -124,7 +124,7 @@ export default function LoginScreen({ navigation }) {
                 <Ionicons 
                   name={isPasswordVisible ? 'eye-off' : 'eye'} 
                   size={22} 
-                  color="#95a5a6" 
+                  color="#0891b2" 
                 />
               </TouchableOpacity>
             </View>
@@ -151,7 +151,7 @@ export default function LoginScreen({ navigation }) {
             {loading ? (
               <ActivityIndicator color="#fff" />
             ) : (
-              <Text style={styles.btnText}>AUTHENTICATE</Text>
+              <Text style={styles.btnText}>SIGN IN TO WORKSPACE</Text>
             )}
           </TouchableOpacity>
 
@@ -185,42 +185,44 @@ const styles = StyleSheet.create({
   container: { flex: 1 },
   innerContainer: { flex: 1, justifyContent: 'center', alignItems: 'center' },
   card: { 
-    width: '88%', 
+    width: '90%', 
+    maxWidth: 420,
     backgroundColor: '#ffffff', 
-    paddingHorizontal: 25, 
-    paddingVertical: 40, 
-    borderRadius: 35, 
-    elevation: 20,
-    shadowColor: '#000',
-    shadowOpacity: 0.2,
+    paddingHorizontal: 26, 
+    paddingVertical: 36, 
+    borderRadius: 24, 
+    elevation: 8,
+    shadowColor: '#0891b2',
+    shadowOpacity: 0.15,
     shadowRadius: 20,
+    shadowOffset: { width: 0, height: 6 },
   },
-  brand: { fontSize: 34, fontWeight: '900', color: '#1a3c5a', textAlign: 'center', letterSpacing: 2 },
-  title: { fontSize: 12, color: '#25a29a', textAlign: 'center', marginBottom: 40, fontWeight: 'bold', letterSpacing: 1, textTransform: 'uppercase' },
-  inputGroup: { marginBottom: 20 },
-  label: { fontSize: 12, fontWeight: '800', color: '#7f8c8d', marginBottom: 8, marginLeft: 5, textTransform: 'uppercase' },
-  input: { backgroundColor: '#f8f9fa', padding: 16, borderRadius: 15, fontSize: 16, color: '#2c3e50', borderWidth: 1, borderColor: '#f1f2f6' },
+  brand: { fontSize: 32, fontWeight: '800', color: '#0f172a', textAlign: 'center', letterSpacing: 1 },
+  title: { fontSize: 11, color: '#0891b2', textAlign: 'center', marginBottom: 28, fontWeight: '700', letterSpacing: 1.2, textTransform: 'uppercase', marginTop: 4 },
+  inputGroup: { marginBottom: 18 },
+  label: { fontSize: 12, fontWeight: '700', color: '#334155', marginBottom: 8, marginLeft: 2, textTransform: 'uppercase', letterSpacing: 0.5 },
+  input: { backgroundColor: '#f8fafc', padding: 14, borderRadius: 12, fontSize: 15, color: '#0f172a', borderWidth: 1, borderColor: '#cbd5e1' },
   passwordWrapper: { 
     flexDirection: 'row', 
     alignItems: 'center', 
-    backgroundColor: '#f8f9fa', 
-    borderRadius: 15, 
+    backgroundColor: '#f8fafc', 
+    borderRadius: 12, 
     borderWidth: 1, 
-    borderColor: '#f1f2f6',
+    borderColor: '#cbd5e1',
   },
-  passwordInput: { flex: 1, padding: 16, fontSize: 16, color: '#2c3e50' },
-  eyeIcon: { paddingHorizontal: 15 },
-  rememberRow: { flexDirection: 'row', alignItems: 'center', marginBottom: 25, marginLeft: 5 },
-  checkbox: { width: 22, height: 22, borderWidth: 2, borderColor: '#25a29a', borderRadius: 6, marginRight: 12, justifyContent: 'center', alignItems: 'center' },
-  checkboxChecked: { backgroundColor: '#25a29a' },
-  checkMark: { color: '#fff', fontSize: 14, fontWeight: 'bold' },
-  rememberText: { color: '#7f8c8d', fontSize: 14, fontWeight: '600' },
-  loginBtn: { backgroundColor: '#1a3c5a', padding: 20, borderRadius: 15, alignItems: 'center', marginTop: 10, elevation: 5 },
-  btnText: { color: '#fff', fontWeight: '900', fontSize: 16, letterSpacing: 1.5 },
-  guestLinkWrapper: { marginTop: 20, alignItems: 'center' },
-  guestText: { color: '#95a5a6', fontSize: 13, fontWeight: '500' },
-  guestLink: { color: '#1a3c5a', fontWeight: 'bold', textDecorationLine: 'underline' },
-  footer: { marginTop: 25, alignItems: 'center' },
-  footerText: { color: '#95a5a6', fontWeight: '600' },
-  link: { color: '#25a29a', fontWeight: '800' },
+  passwordInput: { flex: 1, padding: 14, fontSize: 15, color: '#0f172a' },
+  eyeIcon: { paddingHorizontal: 14, minHeight: 44, justifyContent: 'center' },
+  rememberRow: { flexDirection: 'row', alignItems: 'center', marginBottom: 22, marginLeft: 2 },
+  checkbox: { width: 22, height: 22, borderWidth: 2, borderColor: '#0891b2', borderRadius: 6, marginRight: 10, justifyContent: 'center', alignItems: 'center' },
+  checkboxChecked: { backgroundColor: '#0891b2' },
+  checkMark: { color: '#fff', fontSize: 13, fontWeight: 'bold' },
+  rememberText: { color: '#64748b', fontSize: 13, fontWeight: '500' },
+  loginBtn: { backgroundColor: '#0891b2', minHeight: 50, borderRadius: 12, alignItems: 'center', justifyContent: 'center', marginTop: 6, elevation: 3, shadowColor: '#0891b2', shadowOpacity: 0.2, shadowRadius: 8, shadowOffset: { width: 0, height: 2 } },
+  btnText: { color: '#fff', fontWeight: '700', fontSize: 14, letterSpacing: 1 },
+  guestLinkWrapper: { marginTop: 18, alignItems: 'center', minHeight: 44, justifyContent: 'center' },
+  guestText: { color: '#64748b', fontSize: 13, fontWeight: '500' },
+  guestLink: { color: '#0891b2', fontWeight: '700', textDecorationLine: 'underline' },
+  footer: { marginTop: 14, alignItems: 'center', minHeight: 44, justifyContent: 'center' },
+  footerText: { color: '#64748b', fontSize: 13, fontWeight: '500' },
+  link: { color: '#0891b2', fontWeight: '700' },
 });
