@@ -264,7 +264,7 @@ export default function AIConsult({ navigation }) {
             style={styles.sendBtn}
             onPress={handleSend}
           >
-            <Ionicons name="send" size={22} color="#1a3c5a" />
+            <Ionicons name="send" size={22} color="#0891b2" />
           </TouchableOpacity>
         )}
       </View>
@@ -305,7 +305,7 @@ const styles = StyleSheet.create({
   },
   userBubble: {
     alignSelf: 'flex-end',
-    backgroundColor: '#1a3c5a',
+    backgroundColor: '#0891b2',
   },
   aiText: { color: '#2c3e50' },
   userText: { color: '#ffffff' },
