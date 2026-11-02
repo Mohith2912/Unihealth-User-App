@@ -262,7 +262,7 @@ const NearbyHospitalsScreen = ({ navigation, route }) => {
   if (loading) {
     return (
       <View style={styles.center}>
-        <ActivityIndicator size="large" color="#1a73e8" />
+        <ActivityIndicator size="large" color="#0891b2" />
         <Text style={{ marginTop: 8, color: '#424242' }}>
           Loading hospitals & location…
         </Text>
@@ -439,7 +439,7 @@ const styles = StyleSheet.create({
     marginRight: 4,
     marginBottom: 4,
   },
-  sortChipActive: { backgroundColor: '#1a73e8' },
+  sortChipActive: { backgroundColor: '#0891b2' },
   sortChipText: { fontSize: 12, color: '#424242' },
   card: {
     backgroundColor: '#fff',
@@ -453,7 +453,7 @@ const styles = StyleSheet.create({
     width: 24,
     height: 24,
     borderRadius: 12,
-    backgroundColor: '#1a73e8',
+    backgroundColor: '#0891b2',
     color: '#fff',
     textAlign: 'center',
     textAlignVertical: 'center',
@@ -466,7 +466,7 @@ const styles = StyleSheet.create({
   distance: {
     fontSize: 12,
     fontWeight: '600',
-    color: '#1a73e8',
+    color: '#0891b2',
     marginLeft: 8,
   },
   cardRow: { flexDirection: 'row', marginTop: 8, gap: 6 },
@@ -481,6 +481,6 @@ const styles = StyleSheet.create({
   badgeHigh: { backgroundColor: '#43a047' },
   badgeMedium: { backgroundColor: '#fb8c00' },
   badgeLow: { backgroundColor: '#9e9e9e' },
-  badgeTime: { backgroundColor: '#1a73e8' },
+  badgeTime: { backgroundColor: '#0891b2' },
   badgeTraffic: { backgroundColor: '#5c6bc0' },
 });
