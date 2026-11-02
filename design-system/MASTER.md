@@ -60,3 +60,4 @@ import { COLORS, SPACING, RADIUS, SHADOWS, TYPOGRAPHY, MIN_TOUCH } from './theme
 - 100% preservation of Firebase Realtime Database paths (`Hospitals/...`, `tokens/...`, `orders/...`, `patients/...`).
 - 100% preservation of Firebase Authentication session states and Expo SecureStore credential caching.
 - Zero breaking changes to existing navigation parameters, callbacks, or business rules.
+
