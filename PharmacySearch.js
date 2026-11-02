@@ -149,7 +149,7 @@ const pharmacyName = route?.params?.pharmacyName || 'Pharmacy Store';
           <MaterialCommunityIcons
             name={item.coldChain ? 'snowflake' : 'pill'}
             size={22}
-            color={item.coldChain ? '#2980b9' : '#25a29a'}
+            color={item.coldChain ? '#2980b9' : '#0891b2'}
           />
           <View style={styles.row}>
             {isOutOfStock ? (
@@ -434,7 +434,7 @@ const styles = StyleSheet.create({
   mainTitle: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#1a3c5a',
+    color: '#0f172a',
     marginBottom: 15,
   },
   searchRow: {
@@ -453,7 +453,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     backgroundColor: '#f1f2f6',
   },
-  activeChip: { backgroundColor: '#25a29a' },
+  activeChip: { backgroundColor: '#0891b2' },
   chipText: {
     color: '#7f8c8d',
     fontWeight: '600',
@@ -500,12 +500,12 @@ const styles = StyleSheet.create({
   medName: {
     fontWeight: 'bold',
     fontSize: 14,
-    color: '#1a3c5a',
+    color: '#0f172a',
     height: 38,
   },
   genericText: {
     fontSize: 10,
-    color: '#25a29a',
+    color: '#0891b2',
     marginBottom: 2,
   },
   stripText: {
@@ -521,10 +521,10 @@ const styles = StyleSheet.create({
   priceText: {
     fontSize: 17,
     fontWeight: '900',
-    color: '#1a3c5a',
+    color: '#0f172a',
   },
   addIcon: {
-    backgroundColor: '#25a29a',
+    backgroundColor: '#0891b2',
     padding: 6,
     borderRadius: 12,
   },
@@ -550,7 +550,7 @@ const styles = StyleSheet.create({
     bottom: 30,
     left: 15,
     right: 15,
-    backgroundColor: '#1a3c5a',
+    backgroundColor: '#0f172a',
     padding: 18,
     borderRadius: 22,
     flexDirection: 'row',
@@ -564,7 +564,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   cartStatus: {
-    color: '#25a29a',
+    color: '#0891b2',
     fontSize: 10,
     fontWeight: 'bold',
     marginTop: 2,
@@ -572,7 +572,7 @@ const styles = StyleSheet.create({
   btnAction: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#25a29a',
+    backgroundColor: '#0891b2',
     paddingHorizontal: 15,
     paddingVertical: 8,
     borderRadius: 12,
@@ -605,7 +605,7 @@ const styles = StyleSheet.create({
   modalTitle: {
     fontSize: 22,
     fontWeight: 'bold',
-    color: '#1a3c5a',
+    color: '#0f172a',
     marginTop: 10,
   },
   modalSubtitle: {
@@ -616,7 +616,7 @@ const styles = StyleSheet.create({
     lineHeight: 20,
   },
   scanBtn: {
-    backgroundColor: '#25a29a',
+    backgroundColor: '#0891b2',
     width: '100%',
     padding: 18,
     borderRadius: 18,
