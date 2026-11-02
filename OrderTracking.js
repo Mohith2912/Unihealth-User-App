@@ -56,14 +56,14 @@ export default function OrderTracking({ navigation }) {
           
           {/* Pharmacy Marker */}
           <View style={[styles.marker, { left: 10 }]}>
-            <View style={styles.iconCircle}><Ionicons name="medical" size={20} color="#25a29a" /></View>
+            <View style={styles.iconCircle}><Ionicons name="medical" size={20} color="#0891b2" /></View>
             <Text style={styles.markerText}>Pharmacy</Text>
           </View>
 
           {/* THE BIKE - Using MaterialCommunityIcons for a real Motorbike icon */}
           <Animated.View style={[styles.bikeContainer, { transform: [{ translateX }, { rotate: tilt }] }]}>
             <View style={styles.bikeWrapper}>
-               <MaterialCommunityIcons name="motorbike" size={42} color="#1a3c5a" />
+               <MaterialCommunityIcons name="motorbike" size={42} color="#0891b2" />
                <View style={styles.exhaustSmoke} />
             </View>
           </Animated.View>
@@ -90,8 +90,8 @@ export default function OrderTracking({ navigation }) {
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: '#fff' },
   header: { padding: 30, alignItems: 'center' },
-  title: { fontSize: 22, fontWeight: 'bold', color: '#1a3c5a' },
-  subtitle: { color: '#25a29a', fontWeight: '600', marginTop: 5 },
+  title: { fontSize: 22, fontWeight: 'bold', color: '#0f172a' },
+  subtitle: { color: '#0891b2', fontWeight: '600', marginTop: 5 },
   mapSimulation: { flex: 1, justifyContent: 'center' },
   roadTrack: { height: 100, backgroundColor: '#f8f9fa', justifyContent: 'center', marginHorizontal: 20, borderRadius: 20 },
   dashedLine: { position: 'absolute', width: '90%', height: 2, borderStyle: 'dashed', borderColor: '#bdc3c7', borderWidth: 1, alignSelf: 'center' },
@@ -102,5 +102,5 @@ const styles = StyleSheet.create({
   pulseRing: { position: 'absolute', width: 40, height: 40, borderRadius: 20, backgroundColor: 'rgba(231, 76, 60, 0.2)' },
   footerInfo: { padding: 40, borderTopWidth: 1, borderColor: '#eee' },
   footerLabel: { fontSize: 12, color: '#7f8c8d', textTransform: 'uppercase' },
-  partnerName: { fontSize: 16, fontWeight: 'bold', color: '#1a3c5a', marginTop: 5 }
+  partnerName: { fontSize: 16, fontWeight: 'bold', color: '#0f172a', marginTop: 5 }
 });
