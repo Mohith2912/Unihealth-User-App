@@ -809,7 +809,7 @@ export default function RegisterScreen({ navigation }) {
                   disabled={loading}
                 >
                   {loading ? (
-                    <ActivityIndicator color="#1a3c5a" />
+                    <ActivityIndicator color="#0891b2" />
                   ) : (
                     <Text style={styles.ghostBtnText}>
                       📍 SYNC GPS LOCATION

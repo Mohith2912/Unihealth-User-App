@@ -614,7 +614,7 @@ export default function PatientHome({ navigation, route }) {
                 <AppTile
                   label="General Care"
                   icon="calendar-clock"
-                  color="#0f766e"
+                  color="#0891b2"
                   desc="Plan OPD visits & consult"
                   onPress={() =>
                     navigation.navigate('HospitalGeneral', {
@@ -663,7 +663,7 @@ export default function PatientHome({ navigation, route }) {
                 <AppTile
                   label="Lab Tests"
                   icon="test-tube"
-                  color="#0ea5e9"
+                  color="#0891b2"
                   desc="Book diagnostics & scans"
                   onPress={() => navigation.navigate('LabTestCart')}
                   disabled={isGuest}
@@ -808,7 +808,7 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
   chipAccent: {
-    backgroundColor: '#0f766e',
+    backgroundColor: '#0891b2',
   },
   chipLabel: {
     color: '#cbd5f5',

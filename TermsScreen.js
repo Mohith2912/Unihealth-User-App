@@ -6,7 +6,7 @@ import { Ionicons } from '@expo/vector-icons';
 export default function TermsScreen({ navigation }) {
   return (
     <View style={styles.container}>
-      <LinearGradient colors={['#1a3c5a', '#25a29a']} style={styles.header}>
+      <LinearGradient colors={['#0891b2', '#0e7490']} style={styles.header}>
         <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backBtn}>
           <Ionicons name="arrow-back" size={24} color="#fff" />
         </TouchableOpacity>
@@ -54,8 +54,8 @@ const styles = StyleSheet.create({
   headerTitle: { color: '#fff', fontSize: 18, fontWeight: 'bold', marginLeft: 15 },
   content: { padding: 25 },
   lastUpdated: { color: '#bdc3c7', fontSize: 12, marginBottom: 20 },
-  sectionTitle: { fontSize: 16, fontWeight: '800', color: '#1a3c5a', marginTop: 20, marginBottom: 10 },
+  sectionTitle: { fontSize: 16, fontWeight: '800', color: '#0f172a', marginTop: 20, marginBottom: 10 },
   bodyText: { fontSize: 14, color: '#7f8c8d', lineHeight: 22 },
-  closeBtn: { backgroundColor: '#25a29a', padding: 18, borderRadius: 15, marginTop: 40, alignItems: 'center' },
+  closeBtn: { backgroundColor: '#0891b2', padding: 18, borderRadius: 15, marginTop: 40, alignItems: 'center' },
   closeBtnText: { color: '#fff', fontWeight: 'bold' }
 });

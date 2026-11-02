@@ -80,8 +80,8 @@ export default function FamilyHub() {
             <Text style={styles.infoText}>{item.age} Years</Text>
           </View>
           <View style={styles.infoItem}>
-            <MaterialCommunityIcons name="file-document-outline" size={14} color="#25a29a" />
-            <Text style={[styles.infoText, {color: '#25a29a'}]}>Records Linked</Text>
+            <MaterialCommunityIcons name="file-document-outline" size={14} color="#0891b2" />
+            <Text style={[styles.infoText, {color: '#0891b2'}]}>Records Linked</Text>
           </View>
         </View>
 
