@@ -262,7 +262,7 @@ export default function Checkout({ route, navigation }) {
             <MaterialCommunityIcons
               name="lightning-bolt"
               size={24}
-              color={deliveryMode === 'instant' ? '#fff' : '#25a29a'}
+              color={deliveryMode === 'instant' ? '#fff' : '#0891b2'}
             />
             <Text
               style={[
@@ -292,7 +292,7 @@ export default function Checkout({ route, navigation }) {
             <Ionicons
               name="calendar"
               size={22}
-              color={deliveryMode === 'scheduled' ? '#fff' : '#25a29a'}
+              color={deliveryMode === 'scheduled' ? '#fff' : '#0891b2'}
             />
             <Text
               style={[
@@ -392,7 +392,7 @@ export default function Checkout({ route, navigation }) {
                 }
                 size={20}
                 color={
-                  paymentMethod === method ? '#25a29a' : '#7f8c8d'
+                  paymentMethod === method ? '#0891b2' : '#7f8c8d'
                 }
               />
               <Text
@@ -546,7 +546,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     marginLeft: 15,
-    color: '#1a3c5a',
+    color: '#0f172a',
   },
   content: { padding: 20 },
   card: {
@@ -562,8 +562,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 12,
   },
-  cardTitle: { fontWeight: 'bold', color: '#1a3c5a', marginLeft: 8 },
-  gpsText: { color: '#25a29a', fontWeight: 'bold', fontSize: 13 },
+  cardTitle: { fontWeight: 'bold', color: '#0f172a', marginLeft: 8 },
+  gpsText: { color: '#0891b2', fontWeight: 'bold', fontSize: 13 },
   addressDisplay: { color: '#4A5568', fontSize: 14, lineHeight: 20 },
   sectionLabel: {
     fontSize: 13,
@@ -588,8 +588,8 @@ const styles = StyleSheet.create({
     borderColor: '#eee',
   },
   activeBox: {
-    backgroundColor: '#25a29a',
-    borderColor: '#25a29a',
+    backgroundColor: '#0891b2',
+    borderColor: '#0891b2',
   },
   deliveryLabel: { fontWeight: 'bold', marginTop: 8 },
   deliveryTime: { fontSize: 11, color: '#7f8c8d' },
@@ -603,7 +603,7 @@ const styles = StyleSheet.create({
   slotHeader: {
     fontWeight: 'bold',
     marginBottom: 10,
-    color: '#1a3c5a',
+    color: '#0f172a',
   },
   slotItem: {
     flexDirection: 'row',
@@ -612,9 +612,9 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: '#f8f9fa',
   },
-  activeSlotItem: { borderBottomColor: '#25a29a' },
+  activeSlotItem: { borderBottomColor: '#0891b2' },
   slotText: { color: '#4A5568' },
-  activeSlotText: { color: '#25a29a', fontWeight: 'bold' },
+  activeSlotText: { color: '#0891b2', fontWeight: 'bold' },
   coldChainCard: {
     backgroundColor: '#e3f2fd',
     padding: 15,
@@ -634,7 +634,7 @@ const styles = StyleSheet.create({
   },
   coldChainTitle: {
     fontWeight: 'bold',
-    color: '#1a3c5a',
+    color: '#0f172a',
     fontSize: 14,
   },
   coldChainSub: { color: '#546e7a', fontSize: 11, marginTop: 2 },
@@ -667,10 +667,10 @@ const styles = StyleSheet.create({
   payLabel: {
     flex: 1,
     marginLeft: 15,
-    color: '#1a3c5a',
+    color: '#0f172a',
     fontSize: 14,
   },
-  activePayText: { color: '#25a29a', fontWeight: 'bold' },
+  activePayText: { color: '#0891b2', fontWeight: 'bold' },
   radio: {
     width: 18,
     height: 18,
@@ -678,7 +678,7 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: '#bdc3c7',
   },
-  radioActive: { borderColor: '#25a29a', backgroundColor: '#25a29a' },
+  radioActive: { borderColor: '#0891b2', backgroundColor: '#0891b2' },
   walletPill: {
     paddingHorizontal: 10,
     paddingVertical: 4,
@@ -701,7 +701,7 @@ const styles = StyleSheet.create({
   },
   impactTitle: {
     fontWeight: 'bold',
-    color: '#1a3c5a',
+    color: '#0f172a',
     fontSize: 14,
   },
   impactSub: { color: '#27ae60', fontSize: 11 },
@@ -713,7 +713,7 @@ const styles = StyleSheet.create({
   },
   billTitle: {
     fontWeight: 'bold',
-    color: '#1a3c5a',
+    color: '#0f172a',
     marginBottom: 15,
   },
   billRow: {
@@ -731,7 +731,7 @@ const styles = StyleSheet.create({
   totalText: {
     fontWeight: 'bold',
     fontSize: 18,
-    color: '#1a3c5a',
+    color: '#0f172a',
   },
   safetyBadge: {
     flexDirection: 'row',
@@ -745,7 +745,7 @@ const styles = StyleSheet.create({
   safetyBadgeText: {
     fontSize: 10,
     fontWeight: 'bold',
-    color: '#25a29a',
+    color: '#0891b2',
     marginLeft: 5,
     letterSpacing: 1,
   },
@@ -761,7 +761,8 @@ const styles = StyleSheet.create({
     borderTopColor: '#eee',
   },
   payBtn: {
-    backgroundColor: '#1a3c5a',
+    backgroundColor: '#0891b2',
+    minHeight: 50,
     padding: 18,
     borderRadius: 18,
     flexDirection: 'row',
