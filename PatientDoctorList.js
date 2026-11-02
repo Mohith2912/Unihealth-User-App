@@ -213,7 +213,7 @@ export default function PatientDoctorList({ route, navigation }) {
           <WardCard
             title="GENERAL WARD B"
             data={wards.generalB}
-            color="#0ea5e9"
+            color="#0891b2"
           />
           <WardCard
             title="EMERGENCY"

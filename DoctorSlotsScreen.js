@@ -195,7 +195,7 @@ export default function DoctorSlotsScreen({ navigation, route }) {
   if (loading) {
     return (
       <View style={styles.loading}>
-        <ActivityIndicator size="large" color="#0f766e" />
+        <ActivityIndicator size="large" color="#0891b2" />
         <Text style={styles.loadingText}>Loading doctor schedule…</Text>
       </View>
     );
@@ -326,7 +326,7 @@ const styles = StyleSheet.create({
     marginRight: 8,
   },
   dayChipActive: {
-    backgroundColor: '#0f766e',
+    backgroundColor: '#0891b2',
   },
   dayText: {
     fontSize: 12,
@@ -362,7 +362,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffffff',
   },
   slotChipActive: {
-    borderColor: '#0f766e',
+    borderColor: '#0891b2',
     backgroundColor: '#dcfce7',
   },
   slotPart: {
@@ -379,7 +379,7 @@ const styles = StyleSheet.create({
   },
   confirmBtn: {
     marginTop: 24,
-    backgroundColor: '#0f766e',
+    backgroundColor: '#0891b2',
     borderRadius: 999,
     paddingVertical: 12,
     alignItems: 'center',
