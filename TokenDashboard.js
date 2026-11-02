@@ -711,7 +711,7 @@ const styles = StyleSheet.create({
   },
   serveBtn: {
     flex: 2,
-    backgroundColor: '#0f172a',
+    backgroundColor: '#0891b2',
     marginRight: 10,
   },
   delayBtn: {
