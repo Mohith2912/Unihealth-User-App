@@ -374,13 +374,111 @@
       font-size: 0.85rem;
       outline: none;
     }
-  </style>
+  
+    /* Mode-based Dynamic Theming for Mobile Simulator */
+    .screen[data-mode="normal"] {
+      --primary: #0891b2;
+      --primary-hover: #0e7490;
+      --primary-light: #ecfeff;
+      --header-bg: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);
+    }
+
+    .screen[data-mode="busy"] {
+      --primary: #d97706;
+      --primary-hover: #b45309;
+      --primary-light: #fffbeb;
+      --header-bg: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+    }
+
+    .screen[data-mode="emergency"] {
+      --primary: #dc2626;
+      --primary-hover: #b91c1c;
+      --primary-light: #fef2f2;
+      --header-bg: linear-gradient(135deg, #991b1b 0%, #dc2626 100%);
+    }
+
+    .home-header {
+      background: var(--header-bg, linear-gradient(135deg, #0891b2 0%, #0e7490 100%)) !important;
+      transition: background 0.35s ease;
+    }
+
+    /* Simulator Mode Pill Bar */
+    .sim-mode-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .sim-mode-btn {
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.08);
+      color: #cbd5e1;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .sim-mode-btn:hover {
+      background: rgba(255, 255, 255, 0.16);
+      color: #fff;
+    }
+
+    .sim-mode-btn.active {
+      background: #ffffff;
+      color: #0f172a;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    }
+
+    /* Radar Sonar Wave on Emergency Card */
+    .radar-sweep-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .radar-sweep-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(239, 68, 68, 0.15) 0%, transparent 60%);
+      animation: radar-rotate 4s linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes radar-rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+</style>
 </head>
 <body>
 
   <div class="simulator-header">
     <h1>UniHealth <span>User App</span></h1>
     <p>Live Patient Healthcare Companion · Localhost Simulator</p>
+    <div class="sim-mode-bar">
+      <span style="font-size: 0.72rem; color: #94a3b8; font-weight: 600;">Hospital State:</span>
+      <button type="button" class="sim-mode-btn active" data-sim-mode="normal" onclick="setSimHospitalMode('normal')">
+        <span style="width:7px;height:7px;border-radius:50%;background:#10b981;"></span> Normal
+      </button>
+      <button type="button" class="sim-mode-btn" data-sim-mode="busy" onclick="setSimHospitalMode('busy')">
+        <span style="width:7px;height:7px;border-radius:50%;background:#f59e0b;"></span> Surge
+      </button>
+      <button type="button" class="sim-mode-btn" data-sim-mode="emergency" onclick="setSimHospitalMode('emergency')">
+        <span style="width:7px;height:7px;border-radius:50%;background:#ef4444;"></span> 🚨 Emergency
+      </button>
+    </div>
   </div>
 
   <div class="phone-frame">
@@ -664,7 +762,30 @@
     if (window.location.search.includes('demo') || window.location.hash.includes('demo')) {
       switchView('home');
     }
-  </script>
+  
+    function setSimHospitalMode(mode) {
+      document.querySelectorAll('.sim-mode-btn').forEach(b => b.classList.toggle('active', b.dataset.simMode === mode));
+      const screen = document.querySelector('.screen');
+      if (screen) screen.dataset.mode = mode;
+      localStorage.setItem('uh_hospital_status', mode);
+
+      const statusBadge = document.querySelector('.badge-danger');
+      if (mode === 'emergency') {
+        alert('Hospital Protocol: Code Red Emergency mode engaged! Trauma bed priorities updated.');
+      }
+    }
+
+    // Initialize mode
+    const initMode = localStorage.getItem('uh_hospital_status') || 'normal';
+    setSimHospitalMode(initMode);
+
+    window.addEventListener('storage', (e) => {
+      if (e.key === 'uh_hospital_status' && e.newValue) {
+        setSimHospitalMode(e.newValue);
+      }
+    });
+
+</script>
 </body>
 </html>
 
