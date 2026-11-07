@@ -1,60 +1,19 @@
-# UniHealth Patient Mobile App
+# UniHealth Patient
 
-A React Native (Expo) healthcare companion for patients — featuring hospital bed search, doctor appointment booking, emergency triage, pharmacy ordering, OPD queue tracking, and AI symptom consultation.
+The patient app is an Expo foundation for the UniHealth platform. It presents service availability and routes patients into approved care journeys; it does not store credentials, medical records, payments, or AI conversations on-device.
 
-## 🚀 Quick Start
+## Start locally
 
-### React Native Development
 ```bash
 npm install
-npx expo start
+npm run start
 ```
 
-### Web Simulator (No Expo Required)
-```bash
-# Open index.html directly in your browser, or:
-python -m http.server 5003
-# Then visit http://localhost:5003
-```
+Set `EXPO_PUBLIC_API_URL` to the deployed hospital API for a physical device. On web, leave it blank when the app is served by the same origin as the API.
 
-The web simulator provides a responsive phone-frame preview with all core patient flows — home, emergency, doctors, pharmacy, queue, and AI consult.
+## Product guardrails
 
-### Demo Access
-- **Direct Link**: `http://localhost:5003/?demo=true`
-- **Demo Email**: `patient@unihealth.org`
-- **Demo Password**: `Patient@2026`
-
-## 🏗️ Architecture
-
-| Layer | Technology |
-|-------|-----------|
-| Framework | React Native (Expo SDK) |
-| Database | Firebase Realtime Database |
-| Auth | Firebase Authentication + SecureStore |
-| Design Tokens | Centralized `theme.js` — COLORS, SPACING, RADIUS, SHADOWS, TYPOGRAPHY |
-| Web Simulator | Vanilla HTML5/CSS3/JS with mobile phone frame |
-
-## 📋 Patient Features
-
-- **Home Dashboard** — Active prescriptions, emergency triage, quick service grid
-- **Doctor Booking** — Specialist search, real-time OPD slot reservation
-- **Emergency Triage** — GPS-based nearest hospital ICU/trauma bed availability
-- **Pharmacy** — Medicine search, cart, doorstep delivery tracking
-- **Live OPD Queue** — Real-time token status with estimated wait time
-- **AI Health Assistant** — Symptom triage chatbot with specialist recommendations
-- **Family Hub** — Linked family member health profiles and vitals
-- **Medical Records** — Lab reports and prescription history
-
-## 🎨 Design System
-
-Built on the **UniHealth Clinical Teal Design System** (`#0891B2`):
-- Centralized tokens in [`theme.js`](theme.js)
-- 44dp minimum touch targets for accessibility
-- Figtree + Noto Sans typography
-
-See [`design-system/MASTER.md`](design-system/MASTER.md) for full documentation.
-
-## 📄 License
-
-Private — UniHealth Healthcare Platform
-
+- Patient and clinical data must go only to authenticated server endpoints.
+- AI assistance must be server mediated, clinically reviewed, logged safely, and able to escalate emergencies.
+- Do not add API keys or database credentials to mobile source files or Expo public variables.
+- Payments, prescriptions, and medical records remain unavailable until their respective backend controls are implemented and tested.
