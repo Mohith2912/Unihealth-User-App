@@ -13,15 +13,14 @@ import {
   Alert,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { GoogleGenerativeAI } from '@google/generative-ai';
 import * as Speech from 'expo-speech';
 
 import { db } from '../../firebaseConfig';
 import { ref, push, serverTimestamp } from 'firebase/database';
 
-// REPLICATED KEY (keep in env for production)
-const API_KEY = 'AIzaSyAcwDuiowbaYiN_-mn5zcXMg6l1SKKO6Vw';
-const genAI = new GoogleGenerativeAI(API_KEY);
+// AI responses must be requested from an authenticated, server-side service.
+// Mobile clients must never carry provider API keys or send clinical text
+// directly to a third-party model.
 
 const systemInstruction = `
 You are Uni-Health AI, a careful medical triage assistant for an Indian multi-speciality hospital network.
@@ -133,70 +132,12 @@ export default function AIConsult({ navigation }) {
     setInput('');
     setLoading(true);
 
-    const modelAliases = ['gemini-2.5-flash', 'gemini-1.5-flash'];
-    let success = false;
-    let aiText = '';
-
-    for (let modelName of modelAliases) {
-      if (success) break;
-      try {
-        const model = genAI.getGenerativeModel({ model: modelName });
-
-        const chat = model.startChat({
-          history: [
-            { role: 'user', parts: [{ text: systemInstruction }] },
-            {
-              role: 'model',
-              parts: [{ text: 'Understood. I am ready to assist.' }],
-            },
-          ],
-        });
-
-        const result = await chat.sendMessage(currentInput);
-        const responseText = result.response.text();
-
-        const navMatch = responseText.match(/\[GOTO:(.*?)\]/);
-        let cleanText = responseText
-          .replace(/\[GOTO:.*?\]/g, '')
-          .trim();
-
-        aiText = cleanText;
-
-        setMessages(prev => [
-          ...prev,
-          {
-            id: (Date.now() + 1).toString(),
-            text: cleanText,
-            isAi: true,
-          },
-        ]);
-
-        speakText(cleanText);
-        logConsult(currentInput, cleanText);
-
-        if (navMatch) {
-          const target = navMatch[1];
-          setTimeout(() => {
-            try {
-              navigation.navigate(target);
-            } catch (e) {
-              console.log('Navigation error:', e?.message);
-            }
-          }, 1500);
-        }
-
-        success = true;
-      } catch (error) {
-        console.error(`AIConsult error with ${modelName}:`, error?.message);
-      }
-    }
-
-    if (!success) {
-      Alert.alert(
-        'Unable to connect',
-        "AI service is currently unavailable. Please check your internet connection or try again in a few minutes."
-      );
-    }
+    setMessages(prev => [...prev, {
+      id: (Date.now() + 1).toString(),
+      text: 'This feature is being prepared for a clinically governed launch. For symptoms that feel severe, sudden, or life-threatening, seek emergency care now.',
+      isAi: true,
+    }]);
+    Alert.alert('Assistant unavailable', 'UniHealth has temporarily disabled automated medical guidance until its reviewed, secure service is connected.');
 
     setLoading(false);
   };
