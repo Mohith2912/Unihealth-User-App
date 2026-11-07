@@ -1,0 +1,14 @@
+{
+  "expo": {
+    "name": "UniHealth",
+    "slug": "unihealth-patient",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "scheme": "unihealth",
+    "assetBundlePatterns": ["**/*"],
+    "android": { "package": "com.unihealth.patient" },
+    "ios": { "bundleIdentifier": "com.unihealth.patient" },
+    "web": { "bundler": "metro", "output": "single" }
+  }
+}
